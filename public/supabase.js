@@ -414,5 +414,3 @@ const Admin = {
  return supabase.from('listings').update({ status: 'deleted' }).eq('id', id);
  }
 };
-
-export { supabase, Auth, Listings, Favorites, Profiles, Storage, Admin };
