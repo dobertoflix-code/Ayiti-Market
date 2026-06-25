@@ -17,7 +17,7 @@ if (!SUPABASE_CONFIGURED) {
 }
 
 // Init client Supabase (via CDN) — null si pa configire, pou evite erè kraze paj
-const supabase = SUPABASE_CONFIGURED
+var supabase = SUPABASE_CONFIGURED
   ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
   : null;
 
