@@ -1470,7 +1470,7 @@ function renderAbout() {
 document.addEventListener('DOMContentLoaded', async () => {
  // Restore Supabase session
  try {
-  const { data: { user } } = await Auth.getUser();
+  const user = await Auth.getUser();
   if (user) {
    const profile = await Profiles.get(user.id);
    APP.currentUser = user;
