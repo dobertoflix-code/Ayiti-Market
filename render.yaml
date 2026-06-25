@@ -1,0 +1,30 @@
+# render.yaml — Deploy Ayiti Market sou Render.com (gratis pou kòmanse)
+# ------------------------------------------------------------
+# Sa a se sèl fason pou GEN server.js (SSR/SEO, /api/*, sitemap,
+# rate-limit) k ap kouri reyèlman. GitHub Pages PA ka fè sa.
+#
+# Kijan pou itilize l:
+#   1. Pibliye repo a sou GitHub.
+#   2. Sou render.com → "New +" → "Blueprint" → konekte repo a.
+#      Render ap detekte fichye sa a otomatikman.
+#   3. Ranpli varyab anviwònman (SUPABASE_URL, SUPABASE_ANON_KEY,
+#      SITE_URL) nan Dashboard → Environment.
+#   4. Deploy. URL ou ap resevwa a (egz. ayiti-market.onrender.com)
+#      se sa ou dwe mete kòm SITE_URL ak nan og:url/canonical.
+
+services:
+  - type: web
+    name: ayiti-market
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SITE_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false

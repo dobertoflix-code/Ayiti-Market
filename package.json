@@ -1,0 +1,21 @@
+{
+  "name": "ayiti-market-server",
+  "version": "1.0.0",
+  "description": "Ayiti Market — server Node.js/Express ak SSR pou SEO (sitemap, OG dinamik, Schema.org)",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "@supabase/supabase-js": "^2.45.4",
+    "dotenv": "^16.4.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.4.0"
+  }
+}
